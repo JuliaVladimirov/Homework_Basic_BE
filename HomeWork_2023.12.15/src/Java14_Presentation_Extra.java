@@ -16,11 +16,8 @@ public class Java14_Presentation_Extra {
         int intermidiate = 0;
         for (int i = 1; i <= floor; ++i) {
             intermidiate = intermidiate + stepUp - stepDown;
-            if ((intermidiate + stepUp) > floor){
+            if ((intermidiate + stepUp) >= floor) {
                 ++i;
-                System.out.println("You need " + i + " lifts up.");
-                return;
-            }else if ((intermidiate >= floor)){
                 System.out.println("You need " + i + " lifts up.");
                 return;
             }
