@@ -14,9 +14,13 @@ public class Java14_Presentation_Extra {
 
     private static void numberOfLifts(int floor, int stepUp, int stepDown) {
         int intermidiate = 0;
-        for (int i = 1; i <= floor; i++) {
+        for (int i = 1; i <= floor; ++i) {
             intermidiate = intermidiate + stepUp - stepDown;
-            if (intermidiate >= floor){
+            if ((intermidiate + stepUp) > floor){
+                ++i;
+                System.out.println("You need " + i + " lifts up.");
+                return;
+            }else if ((intermidiate >= floor)){
                 System.out.println("You need " + i + " lifts up.");
                 return;
             }
