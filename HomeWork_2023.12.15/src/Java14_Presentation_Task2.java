@@ -7,7 +7,7 @@ public class Java14_Presentation_Task2 {
         int totalInBank = sc.nextInt();
         int j = 0;
             int sumAllowed;
-            for (int i = totalInBank - 1; i > 0; i--) {
+            for (int i = totalInBank / 2; i > 0; i--) {
                 if (totalInBank % i == 0) {
                     sumAllowed = i;
                     totalInBank -= sumAllowed;
